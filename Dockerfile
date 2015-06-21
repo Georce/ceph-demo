@@ -10,6 +10,8 @@ MAINTAINER Sébastien Han "seb@redhat.com"
 # Add bootstrap script
 ADD entrypoint.sh /entrypoint.sh
 
+RUN chmod 755 /entrypoint.sh
+
 # Add volumes for Ceph config and data
 VOLUME ["/etc/ceph","/var/lib/ceph"]
 
